@@ -1,0 +1,85 @@
+:root{
+    background-color: rgb(36, 34, 34);
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: rgb(36, 34, 34);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 550;
+    color: azure;
+    transition: 0.25s ease;
+}
+
+#navbar li a:hover, #navbar a.active{
+    color: orange;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+
+#special{
+    font-family: 'Poppins', sans-serif;
+    background-image: url("images/burger.jpg");
+    height: 80vh;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 1%;
+    border-radius: 10px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+#special h1{
+    padding: 0 20px;
+    color: azure;
+    font-size: 50px;
+    height: 15px;
+}
+
+#special h3{
+    padding: 0 20px;
+    color: azure;
+    font-size: 25px;
+    height: 20px;
+}
+
+#special button{
+    font-family: 'Poppins', sans-serif; 
+    font-size: 30px;
+    background-color: azure;
+    border-radius: 10px;
+    margin-top: 55vh;
+    height: 5vh;
+    width: 70%;
+    align-self: center;
+    border: transparent solid;
+    background-color: orange;
+}
