@@ -175,7 +175,7 @@
     color: azure;
     font-size: 30px;
     height: 15px;
-    margin-left: 70%;
+    margin-left: 69%;
     margin-bottom: 2%;
 }
 
@@ -184,7 +184,7 @@
     color: azure;
     font-size: 15px;
     height: 15px;
-    margin-left: 70%;
+    margin-left: 50%;
 }
 
 /********Footer********/
@@ -207,29 +207,33 @@
 }
 
 #footer #mediaLinks i{
+    transition: 0.25s ease;
     margin: 0 2.5%;
+}
+
+#footer #mediaLinks i:hover{
+    color: orange;
 }
 
  #footer #textInfo{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
  }
 
  #footer #textInfo div{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 15px;
+    width: 50%;
  }
 
  #footer #textInfo div *{
     margin: 0 2%;
     font-family: "Poppins", sans-serif;
     width: auto;
- }
-/*STOPPED HERE*/
- #footer #textInfo div p{
-    word-break: break-all;
  }
 /********Misc.********/
 .logo{
@@ -287,4 +291,9 @@ textarea{
     outline: none;
     padding: 10px;
     box-sizing: border-box;
+}
+
+label{
+    margin-bottom: 6px;
+    display: block;
 }
