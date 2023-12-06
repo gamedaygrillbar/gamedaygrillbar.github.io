@@ -22,14 +22,14 @@
 
 #navbar li{
     list-style: none;
-    padding: 0 20px;
+    margin: 0 15px;
     position: relative;
     font-family: 'Poppins', sans-serif;
 }
 
 #navbar li a{
     text-decoration: none;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 550;
     color: azure;
     transition: 0.25s ease;
@@ -38,13 +38,6 @@
 #navbar li a:hover{
     color: orange;
 }
-
-#navbar li a.active{
-    color: orange;
-}
-
-
-
 /********Specials********/
 #special{
     font-family: 'Poppins', sans-serif;
@@ -109,7 +102,7 @@
 }
 /********About********/
 #about{
-    margin: 20px 0;
+    margin: 40px 0;
     display: flex;
     align-items: center;
 }
@@ -129,12 +122,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 0;
+    margin: 40px 0;
 }
 
 #find .details{
     margin-left: 20px;
-    width: 40%;
+    width: 45%;
     color: azure;
     font-family: 'Poppins', sans-serif;
 }
@@ -149,7 +142,7 @@
 }
 
 #find .map{
-    width: 55%;
+    width: 50%;
     height: 450px;
 }
 
@@ -257,22 +250,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
-    transition: 0.25s ease;
+    margin-top: 15px;
  }
 
  #footer #textInfo div{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.25s ease;
     font-size: 16px;
-    width: 50%;
+    width: 250px;
+    margin: 0 10px;
+ }
+
+ #footer #textInfo div:hover{
+    color: orange;
  }
 
  #footer #textInfo div *{
-    margin: 0 2%;
+    margin: 0 5px;
     font-family: "Poppins", sans-serif;
-    width: auto;
  }
 /********Misc.********/
 .logo{
@@ -280,30 +277,17 @@
     height: 100px;
 }
 /********Contact******/
-#container {
+.form {
+    background: rgb(36, 34, 34);
     color: rgb(239, 104, 8);
     font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    margin: 53px 0;
 }
 
-.contact-box{
-    background: #fff;
+.form .formBox{
     display: flex;
-}
-
-.contact-left{
-    flex-basis: 60%;
-    padding: 40px 70px;
-}
-
-.contact-right{
-    flex-basis: 60%;
-    padding: 40px 60px;
-    background: rgb(170, 173, 173);
-    color: rgb(239, 104, 8);
-}
-
-#container h1{
-    margin-bottom: 10px;
+    padding: 0px 70px;
 }
 
 .input-row{
@@ -317,47 +301,54 @@
 }
 
 input{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: white;
+    background: transparent;
     width: 100%;
     border: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ffffff;
     outline: none;
     padding-bottom: 5px;
+    background-color: transparent;
+}
+
+input::placeholder{
+    color: gainsboro;
+    opacity: 0.9;
 }
 
 textarea{
+    font-family: 'Poppins', sans-serif;
     width: 100%;
+    margin-top: 10px;
     border: 1px solid #ccc;
     outline: none;
     padding: 10px;
     box-sizing: border-box;
-}
-
-label{
-    margin-bottom: 6px;
-    display: block;
+    opacity: 0.9;
 }
 
 button{
+    font-family: 'Poppins', sans-serif;
     background: rgb(239, 104, 8);
-    width: 100px;
+    width: 200px;
     border: none;
     outline: none;
     color: #fff;
     height: 35px;
     border-radius: 30px;
     margin-top: 20px;
-    box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+    box-shadow: 0px 5px 15px 0px rgba(233, 167, 35, 0.3)
 }
 
-.contact-right h3{
-    font-weight: 600;
-    margin-bottom: 30px;
+.feedbackText{
+    font-size: 13px;
 }
 
-tr td:first-child{
-    padding-right: 20px;
-}
-
-tr td{
-    padding-top: 20px;
+#formTitle{
+    width: auto;
+    height: 40px;
+    font-size: 40px;
+    margin-left: 30px;
 }
