@@ -1,7 +1,3 @@
-document.getElementById("orderButton").addEventListener("click", function(){
-    window.location.href = "menu.html"
-});
-
 // Media links
 let elementsList = document.getElementsByClassName("bi-facebook")
 for(let i = 0; i < elementsList.length; i++){
@@ -30,6 +26,7 @@ for(let i = 0; i < elementsList.length; i++){
         window.open("https://www.youtube.com/", "_blank")
     })
 }
+
 
 // Changing photos
 const section = document.getElementById("display")
