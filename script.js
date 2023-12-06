@@ -3,21 +3,33 @@ document.getElementById("orderButton").addEventListener("click", function(){
 });
 
 // Media links
-document.getElementById("facebook").addEventListener("click", function(){
-    window.location.href = "https://www.facebook.com/"
-});
+let elementsList = document.getElementsByClassName("bi-facebook")
+for(let i = 0; i < elementsList.length; i++){
+    elementsList[i].addEventListener("click", function(){
+        window.open("https://www.facebook.com/", "_blank")
+    })
+}
 
-document.getElementById("instagram").addEventListener("click", function(){
-    window.location.href = "https://www.instagram.com/"
-});
+elementsList = document.getElementsByClassName("bi-instagram")
+for(let i = 0; i < elementsList.length; i++){
+    elementsList[i].addEventListener("click", function(){
+        window.open("https://www.instagram.com/", "_blank")
+    })
+}
 
-document.getElementById("twitter").addEventListener("click", function(){
-    window.location.href = "https://www.twitter.com/"
-});
+elementsList = document.getElementsByClassName("bi-twitter-x")
+for(let i = 0; i < elementsList.length; i++){
+    elementsList[i].addEventListener("click", function(){
+        window.open("https://www.twitter.com/", "_blank")
+    })
+}
 
-document.getElementById("youtube").addEventListener("click", function(){
-    window.location.href = "https://www.youtube.com/"
-});
+elementsList = document.getElementsByClassName("bi-youtube")
+for(let i = 0; i < elementsList.length; i++){
+    elementsList[i].addEventListener("click", function(){
+        window.open("https://www.youtube.com/", "_blank")
+    })
+}
 
 // Changing photos
 const section = document.getElementById("display")

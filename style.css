@@ -85,34 +85,70 @@
     align-content: center;
 }
 
-#food .productBox{
+.productBox{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; overflow: au;
 }
 
-#food .product{
-    width: 90%;
-    height: 200px;
+.product{
+    display: flex;
+    width: 400px;
+    height: 250px;
+    background: rgb(62, 61, 61);
     border: rgba(255, 70, 0, 0.7) solid 2px;
     border-radius: 25px;
     box-shadow: 0px 0px 30px rgba(211, 12, 12, 0.02);
     margin: 15px 0;
     transition: 0.2s ease;
     overflow: hidden;
+    background-image: url("images/burger.jpg");
+    background-size: cover;
 }
 
-#food img{
-    width: 40%;
-    height: 90%
-}
-
-
-
-
-#food .product:hover{
+.product:hover{
     box-shadow: 0 0 30px rgba(255, 70, 0, 0.65);
 }
+
+.foodInfo{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.foodTitle{
+    width: 100%;
+    height: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.foodDesc{
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    height: 15px;
+    font-size: 15px;
+    z-index: 2;
+}
+
+.addCartButton{
+    font-family: 'Poppins', sans-serif; 
+    font-size: 15px;
+    background-color: azure;
+    border-radius: 10px;
+    margin-top: 100px;
+    width: 70%;
+    align-self: center;
+    border: transparent solid;
+    cursor: pointer;
+    background-color: orange;
+}
+
+.addCartButton:hover{
+    box-shadow: 0px 5px 15px 0px rgba(215, 95, 51, 0.65);
+}
+
 /********About********/
 #about{
     margin: 40px 0;
@@ -188,7 +224,7 @@
     font-size: 30px;
     background-color: azure;
     border-radius: 10px;
-    margin-top: 40vh;
+    margin-top: 60vh;
     height: 5vh;
     width: 45%;
     align-self: center;
@@ -208,7 +244,7 @@
 #reserveContent img{
     width: 45%;
     height: auto;
-} 
+}
 
 #reserveContent div{
     padding-left: 40px;
@@ -227,10 +263,17 @@
 }
 
 #reserveNext img{
-    width: 45%;
+    width: 200%;
     height: auto;
     
 } 
+
+#reserveNext div{
+    color: azure;
+    font-family: 'Poppins', sans-serif;
+    padding-right: 40px;
+}
+
 /********Footer********/
 #footer{
     color: azure;
@@ -299,6 +342,7 @@
 }
 
 .formTitle{
+    color: azure;
     width: auto;
     height: 40px;
     font-size: 40px;
@@ -360,6 +404,10 @@
     border-radius: 30px;
     margin-top: 20px;
     box-shadow: 0px 5px 15px 0px rgba(233, 167, 35, 0.3)
+}
+
+.formSubmitButton:hover{
+    cursor: pointer;
 }
 
 .formBottomText{
