@@ -11,10 +11,10 @@ for(let i = 0; i < foods.length; i++){
     let menuItem = document.getElementById(foods[i][0]);
     console.log(menuItem);
     if(menuItem != null){
-        menuItem.appendChild(info);
         let info = document.createElement("div");
         info.classList.add("foodInfo");
-
+        menuItem.appendChild(info);
+        
         let title = document.createElement("p");
         title.innerHTML = "$"+ foods[i][3] + " - " + foods[i][1];
         title.classList.add("foodTitle");
