@@ -39,9 +39,8 @@
     color: orange;
 }
 /********Specials********/
-#special{
+#display{
     font-family: 'Poppins', sans-serif;
-    background-image: url("images/burger.jpg");
     height: 80vh;
     width: auto;
     margin-top: 1%;
@@ -51,21 +50,21 @@
     flex-direction: column;
 }
 
-#special h1{
+#display h1{
     padding: 0 20px;
     color: azure;
     font-size: 50px;
     height: 15px;
 }
 
-#special h3{
+#display h3{
     padding: 0 20px;
     color: azure;
     font-size: 25px;
     height: 20px;
 }
 
-#special button{
+#display button{
     font-family: 'Poppins', sans-serif; 
     font-size: 30px;
     background-color: azure;
@@ -86,18 +85,32 @@
     align-content: center;
 }
 
-#food .pro{
-    align-self: center;
-    width: 25%;
-    padding: 10px 12px;
+#food .productBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#food .product{
+    width: 90%;
+    height: 200px;
     border: rgba(255, 70, 0, 0.7) solid 2px;
     border-radius: 25px;
     box-shadow: 0px 0px 30px rgba(211, 12, 12, 0.02);
     margin: 15px 0;
     transition: 0.2s ease;
+    overflow: hidden;
 }
 
-#food .pro:hover{
+#food img{
+    width: 40%;
+    height: 90%
+}
+
+
+
+
+#food .product:hover{
     box-shadow: 0 0 30px rgba(255, 70, 0, 0.65);
 }
 /********About********/
@@ -285,22 +298,29 @@
     margin: 53px 0;
 }
 
+.formTitle{
+    width: auto;
+    height: 40px;
+    font-size: 40px;
+    margin-left: 30px;
+}
+
 .form .formBox{
     display: flex;
     padding: 0px 70px;
 }
 
-.input-row{
+.formInputRow{
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
-.input-row .input-group{
+.formInputRow .formInputGroup{
     flex-basis: 45%;
 }
 
-input{
+.formInput{
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     color: white;
@@ -313,12 +333,12 @@ input{
     background-color: transparent;
 }
 
-input::placeholder{
+.formInput::placeholder{
     color: gainsboro;
     opacity: 0.9;
 }
 
-textarea{
+.formTextArea{
     font-family: 'Poppins', sans-serif;
     width: 100%;
     margin-top: 10px;
@@ -329,7 +349,7 @@ textarea{
     opacity: 0.9;
 }
 
-button{
+.formSubmitButton{
     font-family: 'Poppins', sans-serif;
     background: rgb(239, 104, 8);
     width: 200px;
@@ -342,13 +362,6 @@ button{
     box-shadow: 0px 5px 15px 0px rgba(233, 167, 35, 0.3)
 }
 
-.feedbackText{
+.formBottomText{
     font-size: 13px;
-}
-
-#formTitle{
-    width: auto;
-    height: 40px;
-    font-size: 40px;
-    margin-left: 30px;
 }
