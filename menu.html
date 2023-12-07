@@ -17,7 +17,7 @@
         <div>
             <ul id="navbar">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu & Ordering</a></li>
+                <li><a class = 'active' href="menu.html">Menu & Ordering</a></li>
                 <li><a href="reserve.html">Reservations</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="cart.html"><i class="bi-bag-fill" style="font-size: 26px;"></i></a></li>
@@ -52,7 +52,7 @@
             </div>
             <div id="email">
                 <i class="bi-envelope-at-fill"></i>
-                <p>gamedaygrill@gmail.com</p>
+                <p>gamedaygrillbar@gmail.com</p>
             </div>
         </div>
     </div>
@@ -85,12 +85,7 @@
         "6 boned ribs covered in BBQ sauce",
         10.99,
         "images/burger.jpg"],
-
-
-
     ]
-
-    let cart = []
 
     for(let i = 0; i < foods.length; i++){
         let products = document.getElementById("productBox");
@@ -120,8 +115,8 @@
             info.appendChild(button)
 
             button.addEventListener("click", function(){
-                cart.push([foods[i][0], foods[i][2]]);
-                localStorage.setItem("cart", cart)
+                localStorage.setItem(localStorage.length, foods[i][0] + "....................$" + foods[i][2]);
+                //alert("Added item to order!");
             })
         }
     }

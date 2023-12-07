@@ -43,6 +43,10 @@
 #navbar li a:hover{
     color: rgb(239, 104, 8);
 }
+
+#navbar li a.active{
+    color: rgb(239, 104, 8);
+}
 /********Home********/
 #display{
     font-family: 'Poppins', sans-serif;

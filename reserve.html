@@ -18,7 +18,7 @@
             <ul id="navbar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu & Ordering</a></li>
-                <li><a href="reserve.html">Reservations</a></li>
+                <li><a class='active' href="reserve.html">Reservations</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="cart.html"><i class="bi-bag-fill" style="font-size: 26px;"></i></a></li>
             </ul>
@@ -34,7 +34,7 @@
     <div>
         <h2>Special Events</h2>
         <p>At GameDay Grill, every moment turns into an unforgettable celebration. Birthdays become lively spectacles with friends and family gathering to enjoy our sizzling grill offerings and clink glasses filled with specialty drinks. Anniversaries find a cozy refuge in our welcoming atmosphere, where couples relish in shared moments over hearty meals. Sporting events amplify the excitement as fans unite, rooting for their teams on large screens while savoring our signature bar bites and a selection of ice-cold brews. Be it a birthday extravaganza, a romantic anniversary, or the electric energy of a sporting event, our bar and grill elevate each moment into an unforgettable experience.</p>
-        <button id="eventButton">Book A Room!</button>
+        <a href="contact.html"> <button id="eventButton">Book A Room!</button></a>
     </div>
 </section> 
 
@@ -42,9 +42,43 @@
     <div>
         <h2>Reservations</h2>
         <p>Join us for a winning experience at Game Day Grill! Whether you're gearing up for game night or simply craving delicious flavors, reserve your spot for an unforgettable dining adventure. Call our number below to secure your table and ensure a seat for an epic meal. We can't wait to elevate your dining experience with our fantastic menu and vibrant atmosphere. Get ready to indulge in the spirit of the game at Game Day Grill!</p>
-        <button id = "bookButton">Book A Table Now!</button>
+        <a href="contact.html"> <button id = "bookButton">Book A Table Now!</button></a>
     </div>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0owc9Ko44oxZ1-NREujbPQG0C1tsjjIYZ5w&usqp=CAU" alt="">
+</section>
+
+
+
+<section class="form" id="contactForm">
+    <h3 class="formTitle">Reserve A Table or Book An Event!</h3>
+    <div class="formBox">
+        <form>
+            <div class="formInputRow">
+                <div class="formInputGroup">
+                    <label>Name:</label>
+                    <input class="formInput" id="reserveName" type="text" placeholder="Ex. Kenneth Carson">
+                </div>
+                <div class="formInputGroup">
+                    <label>Phone #:</label>
+                    <input class="formInput" id="reservePhone" type="text" placeholder="Ex. +1 630-656-8097">
+                </div>
+            </div>
+            <div class="formInputRow">
+                <div class="formInputGroup">
+                    <label>Email:</label>
+                    <input class="formInput" id="reserveEmail" type="email" placeholder="name@gmail.com">
+                </div>
+                <div class="formInputGroup">
+                    <label>Subject:</label>
+                    <input class="formInput" id="reserveSubject" type="text" placeholder="Restaurant Feedback, etc.">
+                </div>
+            </div>
+            <label>Message:</label>      
+            <div><textarea class="formTextArea" rows="5" placeholder="Type your Message Here..."></textarea></div>
+            <button class="formSubmitButton" id="reserveSubmitButton" type="submit">Send</button>
+            <p class="formBottomText">Feel free to send us feedback! It's greatly appreciated.</p>
+        </form>
+    </div>
 </section>
 
 
@@ -67,7 +101,7 @@
             </div>
             <div id="email">
                 <i class="bi-envelope-at-fill"></i>
-                <p>gamedaygrill@gmail.com</p>
+                <p>gamedaygrillbar@gmail.com</p>
             </div>
         </div>
     </div>
@@ -76,12 +110,12 @@
 <script>
     //reserveButton
     document.getElementById("eventButton").addEventListener("click", function(){
-        window.location.href("contact.html");
+        document.getElementById("reserveSubject").value = "Special Event";
     })
 
     //specialEventButton
     document.getElementById("bookButton").addEventListener("click", function(){
-        window.location.href("contact.html");
+        document.getElementById("reserveSubject").value = "Table Booking";
     })
     </script>
 </html>
