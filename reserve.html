@@ -118,7 +118,7 @@
             email_id : document.getElementById("reserveEmail").value,
             message : "Hi I would like to " + document.getElementById("reserveSubject").value + " at " + document.getElementById("reserveInfo").value
         }
-        emailjs.send("service_qi5zuqj", "PRZYY-Br6ent4lJpWeUrj", params).then(function(res){
+        emailjs.send("service_qi5zuqj","template_3zf266c", params).then(function (res) {
             alert("Email Sent! " + res.status);
         })
     }
