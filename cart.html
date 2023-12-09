@@ -36,7 +36,7 @@
    <section class="form" id="infoForm">
     <h3 class="formTitle">Payment Information</h3>
     <div class="formBox">
-        <form>
+        <form onsubmit="email(); reset(); return false;">
                 <div class="formInputGroup">
                     <label>Name:</label>
                     <input class="formInput" id="payName" type="text" placeholder="Ex. Kenneth Carson">
@@ -106,5 +106,26 @@
         localStorage.clear();
         location.reload();
     });
+</script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+function email(){
+    
+        Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "gamedaygrillbar@gmail.com",
+        Password : "7679A973BE4A94BC7960C56C552B867F1895",
+        To : "gamedaygrillbar@gmail.com",
+        From : "gamedaygrillbar@gmail.com",
+        Subject : "Payment",
+        Body : "Name: " + document.getElementById("payName").value +
+                "<br> Email: " + document.getElementById("payEmail").value +
+                "<br> Phone #: " + document.getElementById("payPhone").value +
+                "<br> Card #: " + document.getElementById("payCard").value +
+                "<br> Total: " + document.getElementById("total").innerHTML.substring(document.getElementById("total").innerHTML.indexOf("$"))
+        }).then(
+        message => alert(message)
+    );
+}
 </script>
 </html>

@@ -29,7 +29,7 @@
    <section class="form" id="contactForm">
         <h3 class="formTitle">Contact Us!</h3>
         <div class="formBox">
-            <form>
+            <form onsubmit="email(); reset(); return false;">
                 <div class="formInputRow">
                     <div class="formInputGroup">
                         <label>Name:</label>
@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <label>Message:</label>      
-                <div><textarea class="formTextArea" rows="5" placeholder="Type your Message Here..."></textarea></div>
+                <div><textarea class="formTextArea" id="contactMessage" rows="5" placeholder="Type your Message Here..."></textarea></div>
                 <button class="formSubmitButton" id="contactSubmitButton" type="submit">Send</button>
                 <p class="formBottomText">Feel free to send us feedback! It's greatly appreciated.</p>
             </form>
@@ -84,4 +84,23 @@
     </div>
     </footer>
 </body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+function email(){
+        Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "gamedaygrillbar@gmail.com",
+        Password : "7679A973BE4A94BC7960C56C552B867F1895",
+        To : "gamedaygrillbar@gmail.com",
+        From : "gamedaygrillbar@gmail.com",
+        Subject : document.getElementById("contactSubject").value,
+        Body : "Name: " + document.getElementById("contactName").value +
+                "<br> Email: " + document.getElementById("contactEmail").value +
+                "<br> Phone #: " + document.getElementById("contactPhone").value +
+                "<br> Message: " + document.getElementById("contactMessage").value
+        }).then(
+        message => console.log(message)
+    );  
+}
+</script>
 </html>
