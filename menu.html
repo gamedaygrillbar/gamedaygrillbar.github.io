@@ -13,18 +13,14 @@
 </head>
 
 <body>
-<section id="header">
-    <a href="#"><img src="images/logo.png" class="logo" alt="Logo"></a>
-    <div>
-        <ul id="navbar">
-            <li><a href="index.html">Home</a></li>
-            <li><a class = 'active' href="menu.html">Menu & Ordering</a></li>
-            <li><a href="reserve.html">Reservations</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-             <li><a href="cart.html"><i class="bi-bag-fill" style="font-size: 26px;"></i></a></li>
-        </ul>
-    </div>
-</section>
+    <section id="header">
+        <a href="index.html"><img src="images/logo.png" class="logo" alt="Logo"></a>
+        <a class='active' href="index.html">Home</a>
+        <a href="menu.html">Menu & Ordering</a>
+        <a href="reserve.html">Reservations</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="cart.html"><i class="bi-bag-fill"></i></a>
+    </section>
 
 <h1 class="topText">Menu</h1>
 
@@ -126,19 +122,25 @@
         "Sides"],
 
         ["Martini",
-        "Ice-cold cocktail consisting of gin and vermouth and garnished with lemon zest",
-        5.99,
-        "images/burger.jpg",
-        "Drinks"],
-
-        ["Mojito",
-        "A cuban cocktail consisting of white rum, lime, sugar, and seltzer and garnished with mint",
+        "An ice-cold cocktail consisting of half parts gin and half parts vermouth with a lemon zest garnish",
         5.99,
         "images/burger.jpg",
         "Drinks"],
 
         ["Margarita",
-        "A cuban cocktail consisting of white rum, lime, sugar, and seltzer and garnished with mint",
+        "A refreshing cocktail consisting of three parts Tequila, two parts triple sec, one part lime juice, and served on the rocks",
+        5.99,
+        "images/burger.jpg",
+        "Drinks"],
+
+        ["Old Fashioned",
+        "A classic consisting of bourbon, orange bitters, sugar, and topped with a maraschino cherry and orange zest",
+        5.99,
+        "images/burger.jpg",
+        "Drinks"],
+
+        ["Shirley Temple",
+        "A non-alcoholic beverage consisting of Sprite and grenadine and topped with a maraschino cherry",
         5.99,
         "images/burger.jpg",
         "Drinks"],
@@ -165,11 +167,7 @@
         "12 fl. oz. can of ice-cold Fanta",
         1.99,
         "images/burger.jpg",
-        "Drinks"],
-
-       
-        
-
+        "Drinks"]
     ]
 
     for(let i = 0; i < foods.length; i++){

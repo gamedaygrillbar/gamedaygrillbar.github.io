@@ -13,18 +13,14 @@
 </head>
 <body>
     <section id="header">
-        <a href="#"><img src="images/logo.png" class="logo" alt="Logo"></a>
-        <div>
-            <ul id="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu & Ordering</a></li>
-                <li><a href="reserve.html">Reservations</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a class = 'active' href="cart.html"><i class="bi-bag-fill" style="font-size: 26px;"></i></a></li>
-            </ul>
-        </div>
-   </section>
-
+        <a href="index.html"><img src="images/logo.png" class="logo" alt="Logo"></a>
+        <a class='active' href="index.html">Home</a>
+        <a href="menu.html">Menu & Ordering</a>
+        <a href="reserve.html">Reservations</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="cart.html"><i class="bi-bag-fill"></i></a>
+    </section>
+    
    <section class="form" id="infoForm">
     <div id="order">
         <h3>Your Order</h3>
@@ -84,9 +80,14 @@
 </footer>
 </body>
 <script type="module">
+</script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    let orderStr = ""
     let itemList = document.getElementById("itemList");
     let total = document.getElementById("total");
     let clearButton = document.getElementById("clear");
+    
     window.onload = function(){
         let price = 0.00;
         for(let i = 0; i < localStorage.length; i++){
@@ -94,34 +95,47 @@
             let str = localStorage.getItem(i);
             item.classList.add("item");
             item.innerHTML = str;
+            orderStr += str + "<br>"
             itemList.appendChild(item);
             price += +parseFloat(str.substring(str.indexOf("$")+1)).toFixed(2);
         }
         total.innerHTML = "Total: $" + price.toFixed(2);
     }
+
     clearButton.addEventListener("click", function(){
         localStorage.clear();
         location.reload();
     });
-</script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
-function email(){
+
+    function email(){
+        if(orderStr == "" || document.getElementById("payName").value == "" || document.getElementById("payPhone").value == "" || document.getElementById("payEmail").value == "" || document.getElementById("payCard").value == "" ){
+            alert("Error placing order. Please fill out all information and have a valid order.")
+            return false;
+        }
         Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "gamedaygrillbar@gmail.com",
-        Password : "7679A973BE4A94BC7960C56C552B867F1895",
-        To : "gamedaygrillbar@gmail.com",
-        From : "gamedaygrillbar@gmail.com",
-        Subject : "Payment",
-        Body : "Name: " + document.getElementById("payName").value +
+            Host : "smtp.elasticemail.com",
+            Username : "gamedaygrillbar@gmail.com",
+            Password : "7679A973BE4A94BC7960C56C552B867F1895",
+            To : "gamedaygrillbar@gmail.com",
+            From : "gamedaygrillbar@gmail.com",
+            Subject : "Payment",
+            Body : "Name: " + document.getElementById("payName").value +
                 "<br> Email: " + document.getElementById("payEmail").value +
                 "<br> Phone #: " + document.getElementById("payPhone").value +
                 "<br> Card #: " + document.getElementById("payCard").value +
-                "<br> Total: " + document.getElementById("total").innerHTML.substring(document.getElementById("total").innerHTML.indexOf("$"))
-        }).then(
-        message => alert(message)
-    );
-}
+                "<br> Total: " + document.getElementById("total").innerHTML.substring(document.getElementById("total").innerHTML.indexOf("$")) +
+                "<br> Order: " + orderStr
+            }).then(
+            message => {
+                if(message.toString() == "OK"){
+                    localStorage.clear()
+                    location.reload()
+                    alert("Order sucessfully placed!")
+                } else{
+                    alert("There has been an error. Try again.")
+                }
+            }
+        );
+    }
 </script>
 </html>

@@ -13,17 +13,13 @@
 </head>
 <body>
     <section id="header">
-        <a href="#"><img src="images/logo.png" class="logo" alt="Logo"></a>
-        <div>
-            <ul id="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu & Ordering</a></li>
-                <li><a href="reserve.html">Reservations</a></li>
-                <li><a class = 'active' href="contact.html">Contact Us</a></li>
-                <li><a href="cart.html"><i class="bi-bag-fill" style="font-size: 26px;"></i></a></li>
-            </ul>
-        </div>
-   </section>
+        <a href="index.html"><img src="images/logo.png" class="logo" alt="Logo"></a>
+        <a class='active' href="index.html">Home</a>
+        <a href="menu.html">Menu & Ordering</a>
+        <a href="reserve.html">Reservations</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="cart.html"><i class="bi-bag-fill"></i></a>
+    </section>
 
    <section class="form" id="contactForm">
         <h3 class="formTitle">Contact Us!</h3>
@@ -42,11 +38,11 @@
                 <div class="formInputRow">
                     <div class="formInputGroup">
                         <label>Email:</label>
-                        <input class="formInput" id="contactEmail" type="email" placeholder="name@gmail.com">
+                        <input class="formInput" id="contactEmail" type="email" placeholder="Ex. name@gmail.com">
                     </div>
                     <div class="formInputGroup">
                         <label>Subject:</label>
-                        <input class="formInput" id="contactSubject" type="text" placeholder="Restaurant Feedback, etc.">
+                        <input class="formInput" id="contactSubject" type="text" placeholder="Reservation, Event, etc.">
                     </div>
                 </div>
                 <label>Message:</label>      
@@ -85,20 +81,24 @@
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
 function email(){
+        if(orderStr == "" || document.getElementById("contactName").value == "" || document.getElementById("contactPhone").value == "" || document.getElementById("contactEmail").value == "" || document.getElementById("contactSubject").value == "" ){
+            alert("Error. Please fill out all information. (message optional)")
+            return false;
+        }
         Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "gamedaygrillbar@gmail.com",
-        Password : "7679A973BE4A94BC7960C56C552B867F1895",
-        To : "gamedaygrillbar@gmail.com",
-        From : "gamedaygrillbar@gmail.com",
-        Subject : document.getElementById("contactSubject").value,
-        Body : "Name: " + document.getElementById("contactName").value +
+            Host : "smtp.elasticemail.com",
+            Username : "gamedaygrillbar@gmail.com",
+            Password : "7679A973BE4A94BC7960C56C552B867F1895",
+            To : "gamedaygrillbar@gmail.com",
+            From : "gamedaygrillbar@gmail.com",
+            Subject : document.getElementById("contactSubject").value,
+            Body : "Name: " + document.getElementById("contactName").value +
                 "<br> Email: " + document.getElementById("contactEmail").value +
                 "<br> Phone #: " + document.getElementById("contactPhone").value +
                 "<br> Message: " + document.getElementById("contactMessage").value
-        }).then(
-        message => console.log(message)
-    );  
+            }).then(
+            message => console.log(message)
+        );  
 }
 </script>
 </html>
