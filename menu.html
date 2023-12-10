@@ -65,111 +65,118 @@
 </body>
 
 <script type="module">
-    // Menu
-    let foods = [
-        ["Home Run Burger", // Name of food
-        "Quarter-pound patty with lettuce, tomato, red onions, pickle, ketchup, and mayo served on regular buns", // Food description
-        16.99, // Price
-        "images/burger.jpg", // Picture
-        "Main"], // Type of food
+    /* Formatting: 
+    [0] = Name of food, 
+    [1] = Food description, 
+    [2] = Price,
+    [3] = Image URL,
+    [4] = Category */
+
+    let foods = [ 
+        ["Home Run Burger", 
+        "Quarter-pound patty with lettuce, tomato, red onions, pickle, ketchup, and mayo served on regular buns.", 
+        16.99, 
+        "https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+        "Main"], 
         
-        ["Sloppy Joe",
-        "Ground beef mixed with onions, ketchup, and seasonings served on regular buns.",
+        ["Bawk Bawk Sandwitch",
+        "Chicken sandwitch with lettuce, tomato, pickles, ketchup, and mayo served on regular buns",
         15.99,
-        "images/burger.jpg",
+        "https://img.freepik.com/free-photo/sandwich-with-chicken-burger-tomatoes-lettuce_2829-16493.jpg?w=2000&t=st=1702235517~exp=1702236117~hmac=b8e7d352884857c96721d9bf0452c88ed8cecfd96688f18bd9834c029b415dec",
         "Main"],
 
         ["The Shredder",
-        "Shredded BBQ chicken served on regular buns",
+        "Shredded BBQ chicken and beef served on regular buns",
         15.99,
-        "images/burger.jpg",
+        "https://img.freepik.com/free-photo/closeup-shot-open-juicy-pulled-meat-burger-surrounded-by-greens-blue-plate_181624-44909.jpg?w=2000&t=st=1702235170~exp=1702235770~hmac=48a1838f1fd9fc13970599358ee4216f9ab7be007288949de0a52be6a11d80a5",
         "Main"],
 
         ["Wing Basket",
         "12 boneless chicken wings served with ranch",
         13.99,
-        "images/burger.jpg",
+        "https://img.freepik.com/free-photo/fresh-buffalo-chicken-wings-with-savory-dip-appetizer-generative-ai_188544-8118.jpg?w=2000&t=st=1702235578~exp=1702236178~hmac=f79f7f6c152c5e7fb9a2158e3112e641b3a7947b363e80fd38e6239e3626ddc9",
         "Main"],
 
         ["Raging Ribs",
         "6 boned ribs covered in BBQ sauce",
         13.99,
-        "images/burger.jpg",
+        "",
         "Main"],
         
-        ["Creamy Mac'n Cheese",
-        "Classic elbow pasta and cheese baked together",
+        ["Mac'n Cheese",
+        "Classic elbow pasta and creamy cheese baked together",
         11.99,
-        "images/burger.jpg",
+        "",
         "Sides"],
         
         ["Fry Basket",
         "Sliced deep-fried potatoes, garnished with salt and pepper",
         9.99,
-        "images/burger.jpg",
+        "",
         "Sides"],
 
         ["Mozzarella Sticks",
         "Fried mozzarella with homemade marinara sauce.",
         9.99,
-        "images/burger.jpg",
+        "",
         "Sides"],
 
         ["Coleslaw",
         "Shredded cabbage, lettuce, and carrots, coated in mayonanaise and vinaigrette",
         8.99,
-        "images/burger.jpg",
+        "",
         "Sides"],
 
         ["Martini",
         "An ice-cold cocktail consisting of half parts gin and half parts vermouth with a lemon zest garnish",
         5.99,
-        "images/burger.jpg",
+        "",
         "Drinks"],
 
         ["Margarita",
         "A refreshing cocktail consisting of three parts Tequila, two parts triple sec, one part lime juice, and served on the rocks",
         5.99,
-        "images/burger.jpg",
+        "",
         "Drinks"],
 
         ["Old Fashioned",
         "A classic consisting of bourbon, orange bitters, sugar, and topped with a maraschino cherry and orange zest",
         5.99,
-        "images/burger.jpg",
+        "",
         "Drinks"],
 
         ["Shirley Temple",
         "A non-alcoholic beverage consisting of Sprite and grenadine and topped with a maraschino cherry",
         5.99,
-        "images/burger.jpg",
+        "",
         "Drinks"],
 
         ["Craft Beer",
         "Our homemade, creamy and light brew, crafted with malted barley",
         3.99,
-        "images/burger.jpg",
+        "",
         "Drinks"],
 
         ["Coca-Cola",
         "12 fl. oz. can of ice-cold Coca-Cola",
         1.99,
-        "images/burger.jpg",
+        "",
         "Drinks"],
 
         ["Sprite",
         "12 fl. oz. can of ice-cold Sprite",
         1.99,
-        "images/burger.jpg",
+        "",
         "Drinks"],
 
         ["Fanta",
         "12 fl. oz. can of ice-cold Fanta",
         1.99,
-        "images/burger.jpg",
+        "",
         "Drinks"]
     ]
 
+    // Places all the items in food array into the menu div
     for(let i = 0; i < foods.length; i++){
         let section = document.getElementById(foods[i][4]);
         if(section != null){

@@ -206,6 +206,7 @@
 }
 
 .productBox{
+    font-size: 3.5vw;
     display: block;
     justify-content: center;
     align-items: center; 
@@ -238,7 +239,7 @@
 .foodTitle{
     width: 100%;
     height: 15px;
-    font-size: 35x;
+    font-size: 25px;
     font-weight: bold;
     z-index: 2;
 }
