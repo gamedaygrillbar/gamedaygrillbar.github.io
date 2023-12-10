@@ -39,7 +39,7 @@
                 </div>
                 <div class="formInputGroup">
                     <label>Phone #:</label>
-                    <input class="formInput" id="payPhone" type="text" placeholder="Ex. +1 630-656-8097">
+                    <input class="formInput" id="payPhone" type="text" placeholder="Ex. +1 (630) 656-8097">
                 </div>
                 <div class="formInputGroup">
                     <label>Email:</label>
@@ -124,7 +124,7 @@
                 "<br> Phone #: " + document.getElementById("payPhone").value +
                 "<br> Card #: " + document.getElementById("payCard").value +
                 "<br> Total: " + document.getElementById("total").innerHTML.substring(document.getElementById("total").innerHTML.indexOf("$")) +
-                "<br> Order: " + orderStr
+                "<br> Order: <br>" + orderStr
             }).then(
             message => {
                 if(message.toString() == "OK"){
