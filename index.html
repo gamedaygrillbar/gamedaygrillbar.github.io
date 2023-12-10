@@ -25,11 +25,15 @@
         </div>
     </section>
 
+    <h1 class="topText">Welcome to Game Day Grill!</h1>
+
     <section id="display">
-        <h1 id="homeTitle">Loading...</h1>
-        <h3 id="homeDescription">Loading...</h3>
-        <button type="button" id="orderButton">Order Now!</button>
-    </section>
+        <div>
+            <h2>Our Food</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate, nisi ab non perspiciatis quaerat maiores rerum inventore doloremque autem harum laboriosam soluta, nemo, ex vel praesentium deleniti tempora. Labore, sequi!</p>
+        </div>
+        <img id="displayImage" src="https://nationaltoday.com/wp-content/uploads/2021/07/shutterstock_1518533924-min-1200x834.jpg" alt="">
+    </section>  
 
     <section id="about">
         <img src="https://nationaltoday.com/wp-content/uploads/2021/07/shutterstock_1518533924-min-1200x834.jpg" alt="">
@@ -60,14 +64,13 @@
         </div>
     </section>
 
-    <!--All code for page goes above this-->
     <footer id = "footer"> 
         <div>
             <div id="mediaLinks">
-                <i class="bi-facebook" id="facebook"></i>
-                <i class="bi-instagram" id="instagram"></i>
                 <i class="bi-twitter-x" id="twitter"></i>
+                <i class="bi-pinterest" id="pinterest"></i>
                 <i class="bi-youtube" id="youtube"></i>
+                <i class="bi-tiktok" id="tiktok"></i>
             </div>
             <div id="textInfo">
                 <div id="phoneNum">
@@ -84,30 +87,20 @@
                 </div>
             </div>
         </div>
-        </footer>
+    </footer>
 </body>
 <script>
     // Changing photos
-    const section = document.getElementById("display")
-    const title = document.getElementById("homeTitle")
-    const description = document.getElementById("homeDescription")
+    const image = document.getElementById("displayImage")
     let num = 0
-    let titleOptions = ["Juicy Burgers/Meats", "Delicious Sides", "Thirst-Quenching Drinks"]
-    let descriptionOptions = [
-        "Good burger",
-        "Good sides",
-        "Good drinks"
-    ]
     let imageOptions = [
-        "https://static01.nyt.com/images/2023/06/02/multimedia/02GRILL-BASICSrex3-burgers-qmbp/07GRILL-BASICSrex3-burgers-qmbp-master768.jpg?w=1280&q=75",
-        "https://www.inspiredtaste.net/wp-content/uploads/2023/09/Baked-French-Fries-Video.jpg",
-        "https://foodal.com/wp-content/uploads/2015/08/Choosing-the-Best-Beer-Mugs-for-Your-Home-Bar.jpg"
+        "https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1600339240932-226cff938b4f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1560963689-b5682b6440f8?q=80&w=3496&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ]
 
     function load(){
-        section.style.backgroundImage = "url("+imageOptions[num]+")"
-        title.innerHTML = titleOptions[num]
-        description.innerHTML = descriptionOptions[num]
+        image.src = imageOptions[num]
         if(num >= 2){
             num = 0
         } else {

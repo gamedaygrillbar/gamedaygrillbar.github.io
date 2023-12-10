@@ -25,15 +25,13 @@
         </div>
    </section>
 
-   <section id="order">
+   <section class="form" id="infoForm">
+    <div id="order">
         <h3>Your Order</h3>
-        <div class="items" id="itemList">
-        </div>
+        <div class="items" id="itemList"></div>
         <p class="total" id="total">Total: $0.00</p>
         <button class="clear" id="clear" type="button">Clear Order</button>
-   </section>
-
-   <section class="form" id="infoForm">
+    </div>
     <h3 class="formTitle">Payment Information</h3>
     <div class="formBox">
         <form onsubmit="email(); reset(); return false;">
@@ -54,20 +52,17 @@
                     <input class="formInput" id="payCard" type="text" placeholder="####-####-####">
                 </div>
             <button class="formSubmitButton" id="placeOrderButton" type="submit">Place Order</button>
-            <p class="formBottomText">You will recieve a confirmation email once you place your order.</p>
+            <p class="formBottomText">We'll contact you once your order is ready.</p>
         </form>
     </div>
 </section>
-
-
-   <!--All code for page goes above this-->
-   <footer id = "footer"> 
+<footer id = "footer"> 
     <div>
         <div id="mediaLinks">
-            <i class="bi-facebook" id="facebook"></i>
-            <i class="bi-instagram" id="instagram"></i>
             <i class="bi-twitter-x" id="twitter"></i>
+            <i class="bi-pinterest" id="pinterest"></i>
             <i class="bi-youtube" id="youtube"></i>
+            <i class="bi-tiktok" id="tiktok"></i>
         </div>
         <div id="textInfo">
             <div id="phoneNum">
@@ -84,7 +79,7 @@
             </div>
         </div>
     </div>
-    </footer>
+</footer>
 </body>
 <script type="module">
     let itemList = document.getElementById("itemList");
@@ -110,7 +105,6 @@
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
 function email(){
-    
         Email.send({
         Host : "smtp.elasticemail.com",
         Username : "gamedaygrillbar@gmail.com",
