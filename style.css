@@ -78,7 +78,7 @@
 }
 
 #display img{
-    width: 50%;
+    max-width: 50%;
     height: auto;
     margin-left: 20px;
     border: solid rgb(36, 34, 34) 2px;
@@ -102,7 +102,7 @@
 }
 
 #about img{
-    width: 50%;
+    max-width: 50%;
     height: auto;
     border: solid rgb(36, 34, 34) 2px;
 } 
@@ -306,7 +306,7 @@
 }
 
 #reservation img{
-    width: 50%;
+    max-width: 50%;
     height: auto;
     margin-left: 20px;
     border: solid rgb(36, 34, 34) 2px;
@@ -330,7 +330,7 @@
 }
 
 #specialEvent img{
-    width: 50%;
+    max-width: 50%;
     height: auto;
     border: solid rgb(36, 34, 34) 2px;
 } 
@@ -345,6 +345,22 @@
 #specialEvent div p{
     color: rgb(249, 121, 17);
     font-size: 1.5vw;
+}
+
+#contactButton{
+    font-family: 'Poppins', sans-serif;
+    background: rgb(249, 121, 17);
+    width: 70%;
+    border: none;
+    outline: none;
+    color: rgb(36, 34, 34);;
+    height: auto;
+    border-radius: 30px;
+    font-size: 3vw;
+    margin-bottom: 40px;
+    margin-left:15%;
+    align-self: center;
+    cursor: pointer;
 }
 /********Form******/
 .form {

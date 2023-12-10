@@ -24,69 +24,73 @@
                 <li><a href="cart.html"><i class="bi-bag-fill" style="font-size: 26px;"></i></a></li>
             </ul>
         </div>
-   </section>
+    </section>
 
-   <h1 class="topText">Reservations & Special Events</h1>
+    <h1 class="topText">Reservations & Special Events</h1>
 
-<section id="reservation">
-    <div>
-        <h2>Reservations</h2>
-        <p>Join us for a winning experience at Game Day Grill! We can't wait to elevate your dining with our fantastic menu and sporty atmosphere. Fill out the form at our Contact Us page (button below) to create a reservation! We'll contact you once we recieve your reservation request.</p>
-    </div>
-    <img id="reservationImage" src="https://images.unsplash.com/photo-1550520293-d34b3f2e116d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-</section>  
-
-<section id="specialEvent">
-    <img id="specialEventImage" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=3538&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-    <div>
-        <h2>Special Events</h2>
-        <p>At Game Day Grill, every moment turns into an unforgettable celebration. Birthdays become lively spectacles with friends and family gathering to enjoy our sizzling grill offerings and clink glasses filled with specialty drinks. Anniversaries find a cozy refuge in our welcoming atmosphere. Sporting events amplify the excitement as fans unite, rooting for their teams on large screens while savoring our signature bar bites and a selection of ice-cold brews. Fill out the form on our Contact Us page (button below) to schedule a special event now! We’ll contact you once your special event request has been received.</p>
-    </div>
-</section>  
-
-<footer id = "footer"> 
-    <div>
-        <div id="mediaLinks">
-            <i class="bi-twitter-x" id="twitter"></i>
-            <i class="bi-pinterest" id="pinterest"></i>
-            <i class="bi-youtube" id="youtube"></i>
-            <i class="bi-tiktok" id="tiktok"></i>
+    <section id="reservation">
+        <div>
+            <h2>Reservations</h2>
+            <p>Join us for a winning experience at Game Day Grill! We can't wait to elevate your dining with our fantastic menu and sporty atmosphere. Fill out the form at our Contact Us page (button below) to create a reservation! We'll contact you once we recieve your reservation request.</p>
         </div>
-        <div id="textInfo">
-            <div id="phoneNum">
-                <i class="bi-telephone-fill"></i>
-                <p>+1 309-378-4382</p>
+        <img id="reservationImage" src="https://images.unsplash.com/photo-1550520293-d34b3f2e116d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    </section>  
+
+    <section id="specialEvent">
+        <img id="specialEventImage" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=3538&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        <div>
+            <h2>Special Events</h2>
+            <p>At Game Day Grill, every moment turns into an unforgettable celebration. Birthdays become lively spectacles with friends and family gathering to enjoy our sizzling grill offerings and clink glasses filled with specialty drinks. Anniversaries find a cozy refuge in our welcoming atmosphere. Sporting events amplify the excitement as fans unite, rooting for their teams on large screens while savoring our signature bar bites and a selection of ice-cold brews. Fill out the form on our Contact Us page (button below) to schedule a special event now! We’ll contact you once your special event request has been received.</p>
+        </div>
+    </section>  
+    <button id="contactButton" type="button">Book now!</button>
+
+    <footer id = "footer"> 
+        <div>
+         <div id="mediaLinks">
+                <i class="bi-twitter-x" id="twitter"></i>
+                <i class="bi-pinterest" id="pinterest"></i>
+                <i class="bi-youtube" id="youtube"></i>
+                <i class="bi-tiktok" id="tiktok"></i>
             </div>
-            <div id="address">
-                <i class="bi-geo-alt-fill"></i>
-                <p>1 River Run, Downs, IL</p>
-            </div>
-            <div id="email">
-                <i class="bi-envelope-at-fill"></i>
-                <p>gamedaygrillbar@gmail.com</p>
+            <div id="textInfo">
+                <div id="phoneNum">
+                    <i class="bi-telephone-fill"></i>
+                    <p>+1 309-378-4382</p>
+                </div>
+                <div id="address">
+                    <i class="bi-geo-alt-fill"></i>
+                    <p>1 River Run, Downs, IL</p>
+                </div>
+                <div id="email">
+                    <i class="bi-envelope-at-fill"></i>
+                    <p>gamedaygrillbar@gmail.com</p>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
-function email(){
+    document.getElementById("contactButton").addEventListener("click", function(){
+        location.href = "contact.html"
+    });
+    function email(){
         Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "gamedaygrillbar@gmail.com",
-        Password : "7679A973BE4A94BC7960C56C552B867F1895",
-        To : "gamedaygrillbar@gmail.com",
-        From : "gamedaygrillbar@gmail.com",
-        Subject : "Reservation",
-        Body : "Name: " + document.getElementById("reserveName").value +
+            Host : "smtp.elasticemail.com",
+            Username : "gamedaygrillbar@gmail.com",
+            Password : "7679A973BE4A94BC7960C56C552B867F1895",
+            To : "gamedaygrillbar@gmail.com",
+            From : "gamedaygrillbar@gmail.com",
+            Subject : "Reservation",
+            Body : "Name: " + document.getElementById("reserveName").value +
                 "<br> Email: " + document.getElementById("reserveEmail").value +
                 "<br> Type: " + document.getElementById("reserveSubject").value +
                 "<br> Time: " + document.getElementById("reserveInfo").value
-        }).then(
-        message => console.log(message)
-    );  
-}
+            }).then(
+            message => console.log(message)
+        );  
+    }
 </script>
 </html>
 
