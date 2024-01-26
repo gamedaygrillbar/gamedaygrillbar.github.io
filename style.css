@@ -11,7 +11,6 @@
     font-family: "Poppins", sans-serif;
     text-align: center;
     color: azure;
-    font-size: 50px;
     font-size: 5vw;
     width: 100%;
     height: 15px;
@@ -36,9 +35,9 @@
     font-weight: 550;
     font-size: 24px;
     color: azure;
+    text-align: center;
     transition: 0.25s ease;
 }
-
 
 #header a:hover{
     color: rgb(249, 121, 17);
@@ -60,7 +59,8 @@
 #display div{
     color: azure;
     font-family: 'Poppins', sans-serif;
-    font-size: 2.2vw;
+    font-size: 2.5vw;
+    margin: 0;
 }
 
 #display img{
@@ -71,7 +71,7 @@
 }
 
 #display p{
-    font-size: 1.7vw;
+    font-size: 2vw;
     color: rgb(249, 121, 17);
 }
 
@@ -97,12 +97,12 @@
     padding-left: 40px;
     color: azure;
     font-family: 'Poppins', sans-serif;
-    font-size: 2.2vw;
+    font-size: 2.5vw;
 }
 
 #about div p{
     color: rgb(249, 121, 17);
-    font-size: 1.7vw;
+    font-size: 2vw;
 }
 
 #find{
@@ -124,10 +124,11 @@
     width: 45%;
     color: azure;
     font-family: 'Poppins', sans-serif;
+    font-size: 2.5vw;
 }
 
 #find .details p{
-    font-size: 1.7vw;
+    font-size: 2vw;
     color: rgb(249, 121, 17);
 }
 
@@ -185,9 +186,9 @@
     justify-content: center;
     align-items: center;
     transition: 0.25s ease;
-    font-size: 1.5vw;
+    font-size: 20px;
     width: 30%;
-    margin: 0 10px;
+    margin: 0 15px;
  }
 
  #footer #textInfo div:hover{
@@ -300,7 +301,7 @@
 }
 
 #reservation p{
-    font-size: 1.7vw;
+    font-size: 2vw;
     color: rgb(249, 121, 17);
 }
 
@@ -401,12 +402,6 @@
     background-color: transparent;
 }
 
-@media screen and (max-width: 800px) {
-    .formInput{
-        font-size: 3vw;
-    }
-}
-
 .formInput::placeholder{
     color: gainsboro;
     opacity: 0.9;
@@ -496,4 +491,269 @@
     margin-left: 210px;
     font-size: 20px;
     width: 100%;
+}
+/********Mobile Scaling******/
+@media screen and (max-width: 760px) {
+    /********Header********/
+.logo{
+    width: 10vh;
+}
+
+.topText{
+    font-size: 6vw;
+}
+
+#header{
+ 
+}
+
+#header a{
+    font-size: 2vh;
+}
+
+#header a:hover{
+
+}
+/********Home********/
+#display{
+
+}
+
+#display div{
+    font-size: 4vw;
+}
+
+#display img{
+
+}
+
+#display p{
+    font-size: 2.5vw;
+}
+
+#about{
+
+}
+
+#about img{
+  
+} 
+
+#about div{
+    font-size: 4vw;
+}
+
+#about div p{
+    font-size: 2.5vw;
+}
+
+#find{
+ 
+}
+
+#find .details{
+    font-size: 4vw;
+}
+
+#find .details p{
+    font-size: 2.5vw;
+}
+
+#find .details #hours p{
+    font-size: 2.5vw;
+}
+
+#find .map{
+  height: 350px;
+}
+
+#find .map iframe{
+
+}
+/********Footer********/
+#footer{
+
+}
+
+#footer #mediaLinks{
+
+}
+
+#footer #mediaLinks i{
+   
+}
+
+#footer #mediaLinks i:hover{
+
+}
+
+ #footer #textInfo{
+
+ }
+
+ #footer #textInfo div{
+    font-size: 15px;
+    word-break: break-all;
+    margin: 0 10px;
+ }
+
+ #footer #textInfo div:hover{
+  
+ }
+
+ #footer #textInfo div *{
+
+ }
+/*******Menu*********/
+#food{
+    
+}
+
+.productBox{
+ 
+}
+
+.product{
+   
+}
+
+.product:hover{
+
+}
+
+.foodInfo{
+
+}
+
+.foodTitle{
+
+}
+
+.foodDesc{
+
+}
+
+.addCartButton{
+
+}
+
+.addCartButton:hover{
+
+}
+/********Reservations********/
+#reservation{
+  
+}
+
+#reservation div{
+  
+}
+
+#reservation img{
+
+}
+
+#reservation p{
+  
+}
+
+#specialEvent{
+ 
+}
+
+#specialEvent img{
+  
+} 
+
+#specialEvent div{
+
+}
+
+#specialEvent div p{
+
+}
+
+#contactButton{
+
+}
+
+#contactButton:hover{
+  
+}
+/********Form******/
+.form {
+   
+}
+
+.formTitle{
+
+}
+
+.form .formBox{
+
+}
+
+.formInputRow{
+
+}
+
+.formInputRow .formInputGroup{
+  
+}
+
+.formInput{
+    font-size: 3vw;
+}
+
+.formInput::placeholder{
+ 
+}
+
+.formTextArea{
+    
+}
+
+.formSubmitButton{
+    
+}
+
+.formSubmitButton:hover{
+
+}
+
+.formBottomText{
+
+}
+/********Cart******/
+#infoForm{
+
+}
+
+#infoForm .formTitle{
+
+}
+
+#infoForm label{
+ 
+}
+
+#infoForm input{
+
+}
+
+#order{
+
+}
+
+.item{
+
+}
+
+.clear{
+
+}
+
+.total{
+
+}
 }
