@@ -1,3 +1,4 @@
+/********Root********/
 :root{
     background-color: rgb(36, 34, 34);
 }
@@ -58,6 +59,7 @@
     display: flex;
     text-align: center;
     align-items: center;
+    max-height: 600px;
     max-height: 35vw;
     justify-content: space-between;
     background: rgb(32, 29, 29);
@@ -93,6 +95,7 @@
     display: flex;
     align-items: center;
     text-align: center;
+    max-height: 600px;
     max-height: 35vw;
     background: rgb(32, 29, 29);
     border-radius: 25px;
@@ -127,7 +130,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 40px;
+    margin: 40px 0;
+    max-height: 600px;
     max-height: 40vw;
     background: rgb(32, 29, 29);
     border-radius: 25px;
@@ -140,20 +144,20 @@
     border-radius: 25px;
 }
 
-#find .details{
+#find div{
     position: absolute;
     text-align: center;
     padding: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
-#find .details .title{
+#find div .title{
     color: azure;
     font-size: 25px;
     font-size: 4vw;
 }
 
-#find .details .subtext{
+#find div .subtext{
     font-size: 15px;
     font-size: 2vw;
     color: rgb(249, 121, 17);
@@ -162,7 +166,7 @@
 .map{
     height: 500px;
     border: solid rgb(36, 34, 34) 3px;
-    padding: 40px 20px;
+    padding: 0 20px;
 }
 
 .map iframe{
@@ -312,6 +316,7 @@
     background: rgb(32, 29, 29);
     border-radius: 25px;
     overflow: hidden;
+    max-height: 600px;
     max-height: 40vw;
 }
 
@@ -350,6 +355,7 @@
     background: rgb(32, 29, 29);
     border-radius: 25px;
     overflow: hidden;
+    max-height: 600px;
     max-height: 40vw;
 }
 
@@ -386,6 +392,7 @@
     color: rgb(36, 34, 34);;
     height: auto;
     border-radius: 30px;
+    font-size: 20px;
     font-size: 3vw;
     margin-bottom: 40px;
     margin-left:15%;
@@ -572,123 +579,123 @@
 }
 /********Mobile Scaling******/
 @media screen and (max-width: 560px) {
-.logo{
-    width: 100px;
-    width: 15vw;
-    margin-right: 0px;
-}
+    .logo{
+        width: 100px;
+        width: 15vw;
+        margin-right: 0px;
+    }
 
-.topText{
-    font-size: 35px;
-    font-size: 6vw;
-}
+    .topText{
+        font-size: 35px;
+        font-size: 6vw;
+    }
 
-#header{
-    display: grid;
-}
+    #header{
+        display: grid;
+    }
 
-#links{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    padding: 0;
-}
+    #links{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 0;
+    }
 
-#header a{
-    font-size: 4vw;
-}
+    #header a{
+        font-size: 4vw;
+    }
 
-#display .subtext{
-    font-size: 18px;
-    font-size: 2.8vw;
-}
+    #display .subtext{
+        font-size: 18px;
+        font-size: 2.8vw;
+    }
 
-#about div .subtext{
-    font-size: 16px;
-    font-size: 2.5vw;
-}
+    #about div .subtext{
+        font-size: 16px;
+        font-size: 2.5vw;
+    }
 
-#find .details .subtext{
-    font-size: 16px;
-    font-size: 2.2vw;
-}
+    #find .details .subtext{
+        font-size: 16px;
+        font-size: 2.2vw;
+    }
 
-.map{
-    height: 350px;
-}
+    .map{
+        height: 350px;
+    }
 
-#footer #textInfo div{
-    font-size: 15px;
-    margin: 0 10px;
-}
+    #footer #textInfo div{
+        font-size: 15px;
+        margin: 0 10px;
+    }
 
-#reservation div .subtext{
-    font-size: 16px;
-    font-size: 2.2vw;
-}
+    #reservation div .subtext{
+        font-size: 16px;
+        font-size: 2.2vw;
+    }
 
-#specialEvent div .subtext{
-    font-size: 16px;
-    font-size: 2.2vw;
-}
+    #specialEvent div .subtext{
+        font-size: 16px;
+        font-size: 2.2vw;
+    }
 
-#contactButton{
-    font-size: 30px;
-    font-size: 5vw;
-}
+    #contactButton{
+        font-size: 30px;
+        font-size: 5vw;
+    }
 
-.formTitle{
-    font-size: 40px;
-    font-size: 8vw;
-}
+    .formTitle{
+        font-size: 40px;
+        font-size: 8vw;
+    }
 
-.formInputRow .formInputGroup{
-    font-size: 35px;
-    font-size: 6vw;
-}
+    .formInputRow .formInputGroup{
+        font-size: 35px;
+        font-size: 6vw;
+    }
 
-.formInput{
-    font-size: 25px;
-    font-size: 4vw;
-}
+    .formInput{
+        font-size: 25px;
+        font-size: 4vw;
+    }
 
-.formBottomText{
-    font-size: 16px;
-    font-size: 4vw;
-    padding-bottom: 20px;
-}
+    .formBottomText{
+        font-size: 16px;
+        font-size: 4vw;
+        padding-bottom: 20px;
+    }
 
 
-#infoForm .formTitle{
-    font-size: 40px;
-    font-size: 8vw;
-}
+    #infoForm .formTitle{
+        font-size: 40px;
+        font-size: 8vw;
+    }
 
-#infoForm .formInputGroup{
-    font-size: 35px;
-    font-size: 6vw;
-}
+    #infoForm .formInputGroup{
+        font-size: 35px;
+        font-size: 6vw;
+    }
 
-#infoForm .formBottomText{
-    margin: 0 20px;
-    margin: 0 3vw;
-    padding: 20px 0;
-    font-size: 16px;
-    font-size: 3vw;
-}
+    #infoForm .formBottomText{
+        margin: 0 20px;
+        margin: 0 3vw;
+        padding: 20px 0;
+        font-size: 16px;
+        font-size: 3vw;
+    }
 
-#order #orderTitle{
-    font-size: 40px;
-    font-size: 8vw;
-}
+    #order #orderTitle{
+        font-size: 40px;
+        font-size: 8vw;
+    }
 
-#order .total{
-    font-size: 30px;
-    font-size: 5vw;
-}
+    #order .total{
+        font-size: 30px;
+        font-size: 5vw;
+    }
 
-.messageInput{
-    font-size: 35px;
-    font-size: 6vw;
-}
+    .messageInput{
+        font-size: 35px;
+        font-size: 6vw;
+    }
 }

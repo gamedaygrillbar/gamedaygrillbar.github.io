@@ -20,7 +20,7 @@
              <a href="reserve.html">Reservations</a>
              <a href="contact.html">Contact</a>
              <a href="cart.html"><i class="bi-bag-fill"></i></a>
-         </div>
+        </div>
      </section>
     
    <section class="form" id="infoForm">
@@ -30,8 +30,7 @@
         <p class="total" id="total">Total: $0.00</p>
         <button class="clear" id="clear" type="button">Clear Order</button>
     </div>
-    <p class="formTitle">Payment Info</p>
-    
+    <p class="formTitle">Payment Information</p>
     <div class="formBox">
         <form onsubmit="email(); reset(); return false;">
                 <div class="formInputGroup">
@@ -57,32 +56,30 @@
     </section>
 
     <footer id = "footer"> 
-    <div>
-        <div id="mediaLinks">
-            <i class="bi-twitter-x" id="twitter"></i>
-            <i class="bi-pinterest" id="pinterest"></i>
-            <i class="bi-youtube" id="youtube"></i>
-            <i class="bi-tiktok" id="tiktok"></i>
+        <div>
+            <div id="mediaLinks">
+                <i class="bi-twitter-x" id="twitter"></i>
+                <i class="bi-pinterest" id="pinterest"></i>
+                <i class="bi-youtube" id="youtube"></i>
+                <i class="bi-tiktok" id="tiktok"></i>
+            </div>
+            <div id="textInfo">
+                <div id="phoneNum">
+                    <i class="bi-telephone-fill"></i>
+                    <p>+1 309-378-4382</p>
+                </div>
+                <div id="address">
+                    <i class="bi-geo-alt-fill"></i>
+                    <p>1 River Run, Downs, IL</p>
+                </div>
+                <div id="email">
+                    <i class="bi-envelope-at-fill"></i>
+                    <p>gamedaygrillbar@gmail.com</p>
+                </div>
+            </div>
         </div>
-        <div id="textInfo">
-            <div id="phoneNum">
-                <i class="bi-telephone-fill"></i>
-                <p>+1 309-378-4382</p>
-            </div>
-            <div id="address">
-                <i class="bi-geo-alt-fill"></i>
-                <p>1 River Run, Downs, IL</p>
-            </div>
-            <div id="email">
-                <i class="bi-envelope-at-fill"></i>
-                <p>gamedaygrillbar@gmail.com</p>
-            </div>
-        </div>
-    </div>
     </footer>
 </body>
-<script type="module">
-</script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
     let orderStr = ""
