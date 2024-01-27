@@ -342,14 +342,15 @@
 #specialEvent{
     margin: 40px 0;
     display: flex;
-    align-items: center;
     text-align: center;
+    align-items: center;
     color: azure;
-    background: rgb(52, 50, 50);;
-    box-shadow: 0 5px 15px rgb(36, 34, 34);
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    background: rgb(32, 29, 29);
     border-radius: 25px;
     overflow: hidden;
-    max-height: 45vw;
+    max-height: 40vw;
 }
 
 #specialEvent img{
