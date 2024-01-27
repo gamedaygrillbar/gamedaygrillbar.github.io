@@ -3,8 +3,10 @@
 }
 /********Header********/
 .logo{
-    width: 125px;
+    width: 10vw;
     height: auto;
+    justify-self: center;
+    margin-right: 3vw;
 }
 
 .topText{
@@ -24,7 +26,15 @@
     position: sticky;
     top: 0;
     padding: 20px 40px;
+    z-index: 2;
     background-color: rgb(36, 34, 34);
+}
+
+#links{
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    width:max-content;
 }
 
 #header a{
@@ -33,7 +43,7 @@
     margin: 0 2.5%;
     width: auto;
     font-weight: 550;
-    font-size: 24px;
+    font-size: 2.5vw;
     color: azure;
     text-align: center;
     transition: 0.25s ease;
@@ -49,25 +59,24 @@
     text-align: center;
     align-items: center;
     color: azure;
+    max-height: 60%;
     justify-content: space-between;
-    padding: 20px 30px;
-    background: rgb(52, 50, 50);;
-    box-shadow: 0 5px 15px rgb(36, 34, 34);
+    background: rgb(32, 29, 29);
     border-radius: 25px;
+    overflow: hidden;
 }
 
 #display div{
+    position: absolute;
     color: azure;
     font-family: 'Poppins', sans-serif;
+    padding: 20px;
     font-size: 2.5vw;
-    margin: 0;
 }
 
 #display img{
-    max-width: 50%;
-    height: auto;
-    margin-left: 20px;
-    border: solid rgb(36, 34, 34) 2px;
+    width: 125vw;
+    opacity: 0.3;
 }
 
 #display p{
@@ -81,20 +90,21 @@
     align-items: center;
     text-align: center;
     color: azure;
-    padding: 20px 30px;
-    background: rgb(52, 50, 50);;
-    box-shadow: 0 5px 15px rgb(36, 34, 34);
+    max-height: 60%;
+    background: rgb(32, 29, 29);
     border-radius: 25px;
+    overflow: hidden;
 }
 
 #about img{
-    max-width: 50%;
-    height: auto;
-    border: solid rgb(36, 34, 34) 2px;
+    width: 110vw;
+    opacity: 0.3;
+    border-radius: 25px;
 } 
 
 #about div{
-    padding-left: 40px;
+    position: absolute;
+    padding: 20px;
     color: azure;
     font-family: 'Poppins', sans-serif;
     font-size: 2.5vw;
@@ -109,42 +119,52 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 40px 0;
+    margin-top: 40px;
     color: azure;
-    padding: 20px 10px;
-    background: rgb(52, 50, 50);;
-    box-shadow: 0 5px 15px rgb(36, 34, 34);
+    max-height: 70%;
+    background: gb(32, 29, 29);
+    border-radius: 25px;
+    overflow: hidden;
+    font-size: 4vw;
+}
+
+#find img{
+    width: 125vw;
+    opacity: 0.3;
     border-radius: 25px;
 }
 
 #find .details{
+    font-size: 2.5vw;
+    position: absolute;
     text-align: center;
-    font-size: 2vw;
-    margin-left: 10px;
-    width: 45%;
+    padding: 20px;
     color: azure;
     font-family: 'Poppins', sans-serif;
-    font-size: 2.5vw;
 }
 
-#find .details p{
-    font-size: 2vw;
+#find .details div{
+    text-align: center;
+    align-self: center;
     color: rgb(249, 121, 17);
+    font-size: 1.9vw;
 }
 
 #find .details #hours p{
-    height: 15px;
+    height: 10px;
 }
 
-#find .map{
-    width: 50%;
-    height: 450px;
-    border: solid rgb(36, 34, 34) 2px;
+.map{
+    height: 500px;
+    border: solid rgb(36, 34, 34) 3ch;
+    border-radius: 25px;
 }
 
-#find .map iframe{
+.map iframe{
     width: 100%;
     height: 100%;
+    border-radius: 25px;
+    border: solid rgb(32, 29, 29) 3px;
 }
 /********Footer********/
 #footer{
@@ -497,6 +517,7 @@
     /********Header********/
 .logo{
     width: 10vh;
+    margin-right: 0px;
 }
 
 .topText{
@@ -504,15 +525,18 @@
 }
 
 #header{
- 
+    display: grid;
+}
+
+#links{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
 }
 
 #header a{
-    font-size: 2vh;
-}
-
-#header a:hover{
-
+    font-size: 4vw;
 }
 /********Home********/
 #display{
@@ -528,7 +552,7 @@
 }
 
 #display p{
-    font-size: 2.5vw;
+    font-size: 4vw;
 }
 
 #about{
@@ -544,31 +568,31 @@
 }
 
 #about div p{
-    font-size: 2.5vw;
+    font-size: 3vw;
 }
 
 #find{
  
 }
 
+#find img{
+    
+}
+
 #find .details{
     font-size: 4vw;
 }
 
-#find .details p{
-    font-size: 2.5vw;
+#find .details div{
+    font-size: 3vw;
 }
 
 #find .details #hours p{
-    font-size: 2.5vw;
+    font-size: 3vw;
 }
 
-#find .map{
+.map{
   height: 350px;
-}
-
-#find .map iframe{
-
 }
 /********Footer********/
 #footer{
@@ -607,6 +631,10 @@
 /*******Menu*********/
 #food{
     
+}
+
+.category{
+    font-size: 4vw;
 }
 
 .productBox{
@@ -698,11 +726,11 @@
 }
 
 .formInputRow .formInputGroup{
-  
+  font-size: 6vw;
 }
 
 .formInput{
-    font-size: 3vw;
+    font-size: 2.8vw;
 }
 
 .formInput::placeholder{
