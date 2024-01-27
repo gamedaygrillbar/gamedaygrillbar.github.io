@@ -6,7 +6,9 @@
     width: 10vw;
     height: auto;
     justify-self: center;
+    margin-right: 20px;
     margin-right: 3vw;
+    transition: 0.2s ease;
 }
 
 .topText{
@@ -14,7 +16,6 @@
     text-align: center;
     color: azure;
     font-size: 5vw;
-    width: 100%;
     height: 15px;
     margin-bottom: 10%;
 }
@@ -57,8 +58,7 @@
     display: flex;
     text-align: center;
     align-items: center;
-    color: azure;
-    max-height: 60%;
+    max-height: 35vw;
     justify-content: space-between;
     background: rgb(32, 29, 29);
     border-radius: 25px;
@@ -67,10 +67,8 @@
 
 #display div{
     position: absolute;
-    color: azure;
     font-family: 'Poppins', sans-serif;
     padding: 20px;
-    font-size: 2.5vw;
 }
 
 #display img{
@@ -78,7 +76,14 @@
     opacity: 0.3;
 }
 
-#display p{
+#display .title{
+    color: azure;
+    font-size: 25px;
+    font-size: 4vw;
+}
+
+#display .subtext{
+    font-size: 15px;
     font-size: 2vw;
     color: rgb(249, 121, 17);
 }
@@ -88,8 +93,7 @@
     display: flex;
     align-items: center;
     text-align: center;
-    color: azure;
-    max-height: 60%;
+    max-height: 35vw;
     background: rgb(32, 29, 29);
     border-radius: 25px;
     overflow: hidden;
@@ -104,13 +108,18 @@
 #about div{
     position: absolute;
     padding: 20px;
-    color: azure;
     font-family: 'Poppins', sans-serif;
-    font-size: 2.5vw;
 }
 
-#about div p{
+#about div .title{
+    color: azure;
+    font-size: 25px;
+    font-size: 4vw;
+}
+
+#about div .subtext{
     color: rgb(249, 121, 17);
+    font-size: 15px;
     font-size: 2vw;
 }
 
@@ -119,12 +128,10 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 40px;
-    color: azure;
-    max-height: 70%;
+    max-height: 40vw;
     background: rgb(32, 29, 29);
     border-radius: 25px;
     overflow: hidden;
-    font-size: 4vw;
 }
 
 #find img{
@@ -134,11 +141,9 @@
 }
 
 #find .details{
-    font-size: 2.5vw;
     position: absolute;
     text-align: center;
     padding: 20px;
-    color: azure;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -146,24 +151,28 @@
     text-align: center;
     align-self: center;
     color: rgb(249, 121, 17);
-    font-size: 1.9vw;
 }
 
-#find .details #hours p{
-    height: 10px;
+#find .details .title{
+    color: azure;
+    font-size: 25px;
+    font-size: 4vw;
+}
+
+#find .details .subtext{
+    font-size: 15px;
+    font-size: 2vw;
 }
 
 .map{
     height: 500px;
-    border: solid rgb(36, 34, 34) 3ch;
-    border-radius: 25px;
+    border: solid rgb(36, 34, 34) 3px;
+    padding: 40px 20px;
 }
 
 .map iframe{
     width: 100%;
     height: 100%;
-    border-radius: 25px;
-    border: solid rgb(32, 29, 29) 3px;
 }
 /********Footer********/
 #footer{
@@ -225,6 +234,11 @@
     text-align: center;
     color: azure;
     align-content: center;
+}
+
+.category{
+    font-size: 25px;
+    font-size: 4vw;
 }
 
 .productBox{
@@ -304,7 +318,7 @@
     background: rgb(32, 29, 29);
     border-radius: 25px;
     overflow: hidden;
-    max-height: 60%;
+    max-height: 80%;
 }
 
 #reservation div{
@@ -335,6 +349,7 @@
     box-shadow: 0 5px 15px rgb(36, 34, 34);
     border-radius: 25px;
     overflow: hidden;
+    max-height: 80%;
 }
 
 #specialEvent img{
@@ -354,7 +369,7 @@
 
 #specialEvent div p{
     color: rgb(249, 121, 17);
-    font-size: 1.5vw;
+    font-size: 1.7vw;
 }
 
 #contactButton{
@@ -379,36 +394,35 @@
 }
 /********Form******/
 .form {
-    padding: 20px 10px;
     background: rgb(52, 50, 50);
     border-radius: 25px;
     color: rgb(249, 121, 17);
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
-    margin: 20px 0;
+    width: 100%;
+    margin-bottom: 40px;
 }
 
 .formTitle{
     color: azure;
     width: auto;
-    height: 40px;
-    font-size: 40px;
-    margin-left: 30px;
-}
-
-.form .formBox{
-    display: flex;
-    padding: 0px 40px;
+    font-size: 55px;
+    padding: 20px 20px;
+    padding: 3vw 5vw;
+    margin: 0;
 }
 
 .formInputRow{
+    padding: 0 20px;
+    padding: 0 5vw;
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
 .formInputRow .formInputGroup{
-    flex-basis: 100%;
+    flex-basis: 400px;
+    flex-basis: 80vw;
 }
 
 .formInput{
@@ -459,24 +473,55 @@
 }
 
 .formBottomText{
-    font-size: 13px;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.messageInput{
+    width: 80vw;
+    padding: 0 20px;
+    padding: 0 5vw;
+    font-size: 25px;
+}
+
+.messageInput .messageTitle{
+    font-size: 30px;
+}
+
+.messageInput .formTextArea{
+    height: 200px;
+    height: 20vh;
 }
 /********Cart******/
 #infoForm{
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 #infoForm .formTitle{
-    font-size: 30px;
+    font-size: 40px;
+    padding: 0 20px;
+    padding: 0 3vw;
     margin-bottom: 20px;
 }
 
-#infoForm label{
-    font-size: 23px;
+#infoForm .formInputGroup{
+    padding: 0 20px;
+    padding: 0 3vw;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-#infoForm input{
-    font-size: 18px;
+#infoForm .formSubmitButton{
+    max-width: 200px;
+    margin: 0 20px;
+    margin: 0 3vw;
+}
+
+#infoForm .formBottomText{
+    margin: 0 20px;
+    margin: 0 3vw;
+    padding: 20px 0;
+    font-size: 16px;
 }
 
 #order{
@@ -486,8 +531,15 @@
     color:azure;
     width: 60%;
     height: auto;
-    font-size: 25px;
-    margin-left: 30px;
+    font-size: 40px;
+    padding: 0 20px;
+    padding: 0 3vw;
+}
+
+#order #orderTitle{
+    font-size: 40px;
+    padding-top: 20px;
+    margin: 0;
 }
 
 .item{
@@ -504,24 +556,25 @@
     border: none;
     outline: none;
     color: #fff;
-    margin-left: 50px;
     height: 25px;
     border-radius: 30px;
+    margin-bottom: 30px;
 }
 
 .total{
-    margin-left: 210px;
     font-size: 20px;
     width: 100%;
 }
 /********Mobile Scaling******/
 @media screen and (max-width: 560px) {
 .logo{
-    width: 10vh;
+    width: 100px;
+    width: 15vw;
     margin-right: 0px;
 }
 
 .topText{
+    font-size: 35px;
     font-size: 6vw;
 }
 
@@ -540,67 +593,97 @@
     font-size: 4vw;
 }
 
-#display div{
-    font-size: 4vw;
+#display .subtext{
+    font-size: 18px;
+    font-size: 2.8vw;
 }
 
-#display p{
-    font-size: 4vw;
+#about div .subtext{
+    font-size: 16px;
+    font-size: 2.5vw;
 }
 
-
-#about div{
-    font-size: 4vw;
-}
-
-#about div p{
-    font-size: 3vw;
-}
-
-
-#find .details{
-    font-size: 4vw;
-}
-
-#find .details div{
-    font-size: 3vw;
-}
-
-#find .details #hours p{
-    font-size: 3vw;
+#find .details .subtext{
+    font-size: 16px;
+    font-size: 2.2vw;
 }
 
 .map{
-  height: 350px;
+    height: 350px;
 }
 
- #footer #textInfo div{
+#footer #textInfo div{
     font-size: 15px;
-    word-break: break-all;
     margin: 0 10px;
- }
+}
 
-.category{
+#reservation .title{
+    font-size: 25px;
     font-size: 4vw;
 }
 
-#reservation p{
-    font-size: 3vw;
-}
-
-#specialEvent div p{
+#specialEvent div .subtext{
+    font-size: 16px;
     font-size: 2.5vw;
 }
 
 #contactButton{
+    font-size: 30px;
     font-size: 5vw;
 }
 
+.formTitle{
+    font-size: 40px;
+    font-size: 8vw;
+}
+
 .formInputRow .formInputGroup{
-  font-size: 6vw;
+    font-size: 35px;
+    font-size: 6vw;
 }
 
 .formInput{
-    font-size: 2.8vw;
+    font-size: 25px;
+    font-size: 4vw;
+}
+
+.formBottomText{
+    font-size: 16px;
+    font-size: 4vw;
+    padding-bottom: 20px;
+}
+
+
+#infoForm .formTitle{
+    font-size: 40px;
+    font-size: 8vw;
+}
+
+#infoForm .formInputGroup{
+    font-size: 35px;
+    font-size: 6vw;
+}
+
+#infoForm .formBottomText{
+    margin: 0 20px;
+    margin: 0 3vw;
+    padding: 20px 0;
+    font-size: 16px;
+    font-size: 3vw;
+}
+
+#order #orderTitle{
+    font-size: 40px;
+    font-size: 8vw;
+}
+
+#order .total{
+    font-size: 30px;
+    font-size: 5vw;
+}
+
+.messageInput{
+    font-size: 35px;
+    font-size: 6vw;
 }
 }

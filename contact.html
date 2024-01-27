@@ -23,7 +23,7 @@
          </div>
      </section>
    <section class="form" id="contactForm">
-        <h3 class="formTitle">Contact Us!</h3>
+        <p class="formTitle">Contact Us!</p>
         <div class="formBox">
             <form onsubmit="email(); reset(); return false;">
                 <div class="formInputRow">
@@ -50,10 +50,12 @@
                         <input class="formInput" id="contactSubject" type="text" placeholder="Ex. Reservation">
                     </div>
                 </div>
-                <label>Message:</label>      
-                <div><textarea class="formTextArea" id="contactMessage" rows="5" placeholder="Type your Message Here..."></textarea></div>
-                <button class="formSubmitButton" id="contactSubmitButton" type="submit">Send</button>
-                <p class="formBottomText">Feel free to send us feedback! It's greatly appreciated.</p>
+                <div class="messageInput">
+                    <label class="messageTitle">Message:</label>      
+                    <div><textarea class="formTextArea" id="contactMessage" rows="5" placeholder="Type your Message Here..."></textarea></div>
+                    <button class="formSubmitButton" id="contactSubmitButton" type="submit">Send</button>
+                    <p class="formBottomText">Feel free to send us feedback! It's greatly appreciated.</p>
+                </div>
             </form>
         </div>
     </section>
